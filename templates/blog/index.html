@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block container %}
+    {% for blog in blogs %}
+    <div class="post">
+        <div class="date">
+            {{ blog.data_cadastro }}
+        </div>
+        <h2><a href=""></a>{{ blog.titulo }}</h2>
+        <img src="{{blog.imagem.url}}" width="100" height="100" >
+        <p>{{ blog.descricao|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
